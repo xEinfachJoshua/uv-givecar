@@ -10,6 +10,6 @@ RegisterCommand(config.command, function(source, args)
             local vehicleProps = ESX.Game.GetVehicleProperties(vehicle)
             TriggerServerEvent("uv-givecar:givecar", playerServerID, vehicleProps, destinationId)
         else
-            TriggerEvent("esx:ShowNotification", "~r~Du bist in keinem Fahrzeug!")
+            TriggerEvent("esx:showNotification", "~r~Du bist in keinem Fahrzeug!")
         end
 end, false)

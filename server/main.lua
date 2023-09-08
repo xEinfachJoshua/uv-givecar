@@ -8,7 +8,7 @@ AddEventHandler('uv-givecar:givecar', function(source, vehicle, destinationId)
         plate
     })
     if xTarget == nil then
-        TriggerClientEvent("esx:ShowNotification", source, "~r~Dieser Spieler ist nicht online!")
+        TriggerClientEvent("esx:showNotification", source, "~r~Dieser Spieler ist nicht online!")
         return
     end
 
@@ -17,9 +17,9 @@ AddEventHandler('uv-givecar:givecar', function(source, vehicle, destinationId)
             xTarget.identifier,
             plate
         })
-        TriggerClientEvent("esx:ShowNotification", source, "~g~Du hast das Fahrzeug erfolgreich an "..xTarget.name.." gegeben!")
-        TriggerClientEvent("esx:ShowNotification", destinationId, "~g~Du hast ein Fahrzeug erhalten!")
+        TriggerClientEvent("esx:showNotification", source, "~g~Du hast das Fahrzeug erfolgreich an "..xTarget.name.." gegeben!")
+        TriggerClientEvent("esx:showNotification", destinationId, "~g~Du hast ein Fahrzeug erhalten!")
     else
-        TriggerClientEvent("esx:ShowNotification", source, "~r~Du bist nicht der Besitzer dieses Fahrzeugs!")
+        TriggerClientEvent("esx:showNotification", source, "~r~Du bist nicht der Besitzer dieses Fahrzeugs!")
     end
 end)
