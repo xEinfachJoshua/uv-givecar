@@ -6,7 +6,6 @@ RegisterCommand(config.command, function(source, args)
     local playerServerID = GetPlayerServerId(PlayerId())
     if IsPedInAnyVehicle(playerPed, false) then
         local vehicle = GetVehiclePedIsIn(playerPed, false)
-        -- TriggerServerEvent("uv-givecar:givecar", playerServerID, vehicle, destinationId)
         TriggerServerEvent("uv-givecar:checkowner", playerServerID, vehicle, destinationId)
     else
         TriggerEvent("esx:ShowNotification", "~r~Du bist in keinem Fahrzeug!")
