@@ -4,7 +4,7 @@ RegisterCommand(config.command, function(source, args)
     local coords = GetEntityCoords(playerPed)
     local heading = GetEntityHeading(playerPed)
     local playerServerID = GetPlayerServerId(PlayerId())
-    if PedinAnyVehicle(playerPed) then
+    if IsPedInAnyVehicle(playerPed, false) then
         local vehicle = GetVehiclePedIsIn(playerPed, false)
         -- TriggerServerEvent("uv-givecar:givecar", playerServerID, vehicle, destinationId)
         TriggerServerEvent("uv-givecar:checkowner", playerServerID, vehicle, destinationId)
