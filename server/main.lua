@@ -10,7 +10,7 @@ AddEventHandler('uv-givecar:givecar', function(source, vehicle, destinationId)
     if xTarget == nil then
         TriggerClientEvent("esx:ShowNotification", source, "~r~Dieser Spieler ist nicht online!")
         return
-    else
+    end
 
     if response["owner"] == xPlayer.identifier then
         MySQL.update.await('UPDATE `owned_vehicles` SET `owner` = ? WHERE `plate` = ?', {
