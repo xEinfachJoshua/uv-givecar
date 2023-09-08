@@ -9,6 +9,6 @@ RegisterCommand(config.command, function(source, args)
         -- TriggerServerEvent("uv-givecar:givecar", playerServerID, vehicle, destinationId)
         TriggerServerEvent("uv-givecar:checkowner", playerServerID, vehicle, destinationId)
     else
-        ESX.ShowNotification("Du musst in einem Fahrzeug sitzen!")
+        TriggerEvent("esx:ShowNotification", "~r~Du bist in keinem Fahrzeug!")
     end
 end, false)
